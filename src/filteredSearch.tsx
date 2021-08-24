@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import SearchBar from "./searchBar";
-import CategoriesSelector from "./categoriesSelector";
+import Categories from "./categories";
 
 import options from "./searchBarOptions";
 import searchCategories from "./searchCategories";
@@ -38,10 +38,10 @@ const FilteredSearch = () => {
         searchTextCategory={searchTextCategory}
         handleSearchCategoryChange={handleSearchCategoryChange}
       ></SearchBar>
-      <CategoriesSelector
+      <Categories
         otherCategories={otherCategories}
         handleOtherCategoriesChange={handleOtherCategoriesChange}
-      ></CategoriesSelector>
+      ></Categories>
     </>
   );
 };
