@@ -2,7 +2,7 @@ import { Fragment } from "react";
 const CategoryOptions = (props: any) => {
   return (
     <>
-      {props.category.options.map((option: any) => (
+      {Object.keys(props.category.options).map((option: any) => (
         <Fragment key={option}>
           <input
             type="checkbox"
