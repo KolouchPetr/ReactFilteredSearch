@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CategorySearch = (props: any) => {
+const CategoryFilterSearch = (props: any) => {
   const [searchCategory, setSearchCategory] = useState("");
 
   const handleSearchCategoryChange = (e: any) => {
@@ -18,4 +18,4 @@ const CategorySearch = (props: any) => {
   );
 };
 
-export default CategorySearch;
+export default CategoryFilterSearch;

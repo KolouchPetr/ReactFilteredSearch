@@ -1,15 +1,15 @@
-import CategorySearch from "./categorySearch";
-import CategoryOptions from "./categoryOptions";
+import CategoryFilterSearch from "./categoryFilterSearch";
+import CategoryFilterOptions from "./categoryFilterOptions";
 
 const CategoriesFilters = (props: any) => {
   return (
     <>
       <h5>{props.category.name}</h5>
-      <CategorySearch></CategorySearch>
-      <CategoryOptions
+      <CategoryFilterSearch></CategoryFilterSearch>
+      <CategoryFilterOptions
         category={props.category}
         handleOtherCategoriesChange={props.handleOtherCategoriesChange}
-      ></CategoryOptions>
+      ></CategoryFilterOptions>
     </>
   );
 };

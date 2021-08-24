@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-const CategoryOptions = (props: any) => {
+
+const CategoryFilterOptions = (props: any) => {
   return (
     <>
       {Object.keys(props.category.options).map((option: any) => (
@@ -17,4 +18,4 @@ const CategoryOptions = (props: any) => {
   );
 };
 
-export default CategoryOptions;
+export default CategoryFilterOptions;
