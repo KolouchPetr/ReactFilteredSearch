@@ -13,6 +13,7 @@ const FilteredSearch = () => {
 
   const handleSearchTextChange = (e: any) => {
     setSearchText(e.target.value);
+    e.preventDefault();
   };
 
   const handleSearchCategoryChange = (e: any) => {

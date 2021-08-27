@@ -9,6 +9,7 @@ const CategoryFilterOptions = (props: any) => {
             type="checkbox"
             name={props.category.name}
             value={option}
+            checked={props.category.options[option]}
             onChange={props.handleOtherCategoriesChange}
           />
           <label htmlFor="option">{option}</label>

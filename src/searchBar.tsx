@@ -1,8 +1,12 @@
 import options from "./searchBarOptions";
+import { Button } from "primereact/button";
+import { InputText } from "primereact/inputtext";
+import { Dropdown } from "primereact/dropdown";
 
 const SearchBar = (props: any) => {
   return (
-    <form>
+    <form onSubmit={props.handleSearchTextChange}>
+      {/* 
       <select
         onChange={props.handleSearchCategoryChange}
         value={props.searchTextCategory}
@@ -13,14 +17,29 @@ const SearchBar = (props: any) => {
           </option>
         ))}
       </select>
-
-      <input
-        type="text"
-        value={props.searchText}
-        onChange={props.handleSearchTextChange}
+      */}
+      <Dropdown
+        value={props.searchTextCategory}
+        options={options}
+        onChange={props.handleSearchCategoryChange}
+        optionLabel="name"
+        placeholder="Select"
       />
 
-      <input type="submit" value="Search" />
+      <span className="p-input-icon-right">
+        <i className="pi pi-search" />
+        <InputText
+          value={props.searchText}
+          onChange={props.handleSearchTextChange}
+          placeholder="Search"
+        />
+      </span>
+
+      <Button
+        label="Search"
+        type="submit"
+        onSubmit={props.handleSearchTextChange}
+      ></Button>
     </form>
   );
 };

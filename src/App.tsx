@@ -1,5 +1,8 @@
 import "./App.css";
-import { Fragment } from "react";
+
+import "primereact/resources/themes/saga-orange/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 
 import FilteredSearch from "./filteredSearch";
 
