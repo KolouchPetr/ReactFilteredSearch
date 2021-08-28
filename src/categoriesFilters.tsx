@@ -5,7 +5,7 @@ const CategoriesFilters = (props: any) => {
   return (
     <>
       <h5>{props.category.name}</h5>
-      <CategoryFilterSearch></CategoryFilterSearch>
+      <CategoryFilterSearch name={props.category.name}></CategoryFilterSearch>
       <CategoryFilterOptions
         category={props.category}
         handleOtherCategoriesChange={props.handleOtherCategoriesChange}

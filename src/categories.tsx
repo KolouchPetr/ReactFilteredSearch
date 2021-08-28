@@ -3,7 +3,7 @@ import CategoriesFilters from "./categoriesFilters";
 
 const Categories = (props: any) => {
   return (
-    <>
+    <div className="leftCategories">
       {searchCategories.map((category: any) => (
         <CategoriesFilters
           key={category.name}
@@ -11,7 +11,7 @@ const Categories = (props: any) => {
           handleOtherCategoriesChange={props.handleOtherCategoriesChange}
         ></CategoriesFilters>
       ))}
-    </>
+    </div>
   );
 };
 

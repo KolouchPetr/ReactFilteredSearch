@@ -5,7 +5,7 @@ import { Dropdown } from "primereact/dropdown";
 
 const SearchBar = (props: any) => {
   return (
-    <form onSubmit={props.handleSearchTextChange}>
+    <form onSubmit={props.handleSearchTextChange} className="searchBar">
       {/* 
       <select
         onChange={props.handleSearchCategoryChange}
