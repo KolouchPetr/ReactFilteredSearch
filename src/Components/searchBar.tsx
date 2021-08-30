@@ -1,4 +1,3 @@
-import options from "./searchBarOptions";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { Dropdown } from "primereact/dropdown";
@@ -20,10 +19,11 @@ const SearchBar = (props: any) => {
       */}
       <Dropdown
         value={props.searchTextCategory}
-        options={options}
+        options={props.options}
         onChange={props.handleSearchCategoryChange}
         optionLabel="name"
-        placeholder="Select"
+        filterBy="name"
+        placeholder={props.searchTextCategory}
       />
 
       <span className="p-input-icon-right">

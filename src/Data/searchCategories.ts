@@ -1,4 +1,11 @@
-const searchCategories = [
+import { Category } from "./types";
+/*
+interface Item {
+  [key: string]: Object;
+}
+*/
+
+const searchCategories: Category[] = [
   {
     name: "name1",
     options: { option1: false, option2: true },
