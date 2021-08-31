@@ -1,4 +1,8 @@
 export interface Category {
   name: string;
-  [options: string]: any;
+  [option: string]: any;
+}
+
+interface Item {
+  [key: string]: boolean;
 }

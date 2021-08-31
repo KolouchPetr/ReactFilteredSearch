@@ -25,6 +25,7 @@ const CategoriesFilters = (props: CategoriesFiltersProps) => {
         handleSearchCategoryChange={handleSearchCategoryChange}
       ></CategoryFilterSearch>
       <CategoryFilterOptions
+        searchCategory={searchCategory}
         category={props.category}
         handleOtherCategoriesChange={props.handleOtherCategoriesChange}
       ></CategoryFilterOptions>
