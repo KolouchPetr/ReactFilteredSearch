@@ -4,23 +4,11 @@ import { Dropdown } from "primereact/dropdown";
 
 const SearchBar = (props: any) => {
   return (
-    <form onSubmit={props.handleSearchTextChange} className="searchBar">
-      {/* 
-      <select
-        onChange={props.handleSearchCategoryChange}
-        value={props.searchTextCategory}
-      >
-        {options.map((option) => (
-          <option value={option} key={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-      */}
+    <form className="searchBar" onSubmit={props.handleSearchBarFormSubmit}>
       <Dropdown
         value={props.searchTextCategory}
         options={props.options}
-        onChange={props.handleSearchCategoryChange}
+        onChange={(e) => props.handleSearchCategoryChange(e.target.value)}
         optionLabel="name"
         filterBy="name"
         placeholder={props.searchTextCategory}
@@ -35,11 +23,7 @@ const SearchBar = (props: any) => {
         />
       </span>
 
-      <Button
-        label="Search"
-        type="submit"
-        onSubmit={props.handleSearchTextChange}
-      ></Button>
+      <Button label="Search" type="submit"></Button>
     </form>
   );
 };

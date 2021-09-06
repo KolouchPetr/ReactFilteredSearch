@@ -15,12 +15,17 @@ const FilteredSearch = () => {
   const [otherCategories, setOtherCategories] = useState<Category[]>(searchCategories);
 
   const handleSearchTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(e.target.value);
     e.preventDefault();
+    setSearchText(e.target.value);
   };
 
-  const handleSearchCategoryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTextCategory(e.target.value);
+  const handleSearchBarFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert(searchText);
+  };
+
+  const handleSearchCategoryChange = (category: Category) => {
+    setSearchTextCategory(category.name);
   };
 
   const handleOtherCategoriesChange = (e: CheckboxChangeParams) => {
@@ -42,6 +47,7 @@ const FilteredSearch = () => {
         handleSearchTextChange={handleSearchTextChange}
         searchTextCategory={searchTextCategory}
         handleSearchCategoryChange={handleSearchCategoryChange}
+        handleSearchBarFormSubmit={handleSearchBarFormSubmit}
       ></SearchBar>
       <Categories
         otherCategories={otherCategories}
