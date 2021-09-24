@@ -7,6 +7,7 @@ import { CheckboxChangeParams } from "primereact/checkbox";
 interface CategoriesFiltersProps {
   category: Category;
   handleOtherCategoriesChange: (e: CheckboxChangeParams) => void;
+  //categoriesShown: Number;
 }
 
 const CategoriesFilters = (props: CategoriesFiltersProps) => {
